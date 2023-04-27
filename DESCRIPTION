@@ -1,0 +1,15 @@
+Package: DSA5041PROJ2
+Type: Package
+Title: Tests the NULL Hypothesis that means of two populations are the same
+Version: 0.1.0
+Author: Kiley Price
+Maintainer: Kiley Price <kileyprice@ou.edu>
+Description: Use t.test theory to test the NULL hupothesis that the underlying 
+    means of two populations are the same.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Imports: 
+  stats,
+  ggplot2
+RoxygenNote: 7.2.3
