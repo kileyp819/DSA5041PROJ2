@@ -6,10 +6,16 @@ Author: Kiley Price
 Maintainer: Kiley Price <kileyprice@ou.edu>
 Description: Use t.test theory to test the NULL hupothesis that the underlying 
     means of two populations are the same.
-License: MIT
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
   stats,
-  ggplot2
+  ggplot2,
+  dplyr,
+  purrr
 RoxygenNote: 7.2.3
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
