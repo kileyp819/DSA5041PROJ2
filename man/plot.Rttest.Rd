@@ -13,7 +13,7 @@
 }
 \value{
 boxplots of the data when non-paired data is analyzed and
-boxlpot of differences in data when paired = TRUE with the confidence
+boxplot of differences in data when paired = TRUE with the confidence
 interval for the difference of means plotted inside the boxplot of
 differences
 }

@@ -12,11 +12,12 @@
 \item{...}{additional arguments}
 }
 \value{
-prints a (1-alpha)100% confidence interval for mux-muy
-and the test type used on the data
+a (1-alpha)100 percent confidence interval for mux-muy
+and the test type used on the data with appropriate headings
 }
 \description{
-Prints a (1-alpha)100% confidence interval for the difference of means
+Prints a (1-alpha)100 percent confidence interval for the difference of means with
+appropriate headings
 }
 \examples{
 \dontrun{print(ans1)}
