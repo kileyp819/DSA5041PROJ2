@@ -7,12 +7,18 @@
 shinyboxplots()
 }
 \value{
-two boxplots displayed side-by-side, for two samples
+side-by-side boxplots for two samples or difference of means boxplot for paired
+data
 }
 \description{
-Creates two dynamic boxplots using shiny where the values of sample size, mean,
+Creates dynamic boxplots using shiny where the values of mean
 and standard deviation (which are entered into the function rnorm and populates
-x and y) can be changed using widgets
+x and y) can be changed using widgets and the data can be defined as either paired or
+not paired
+}
+\details{
+Using this package, the displayed boxplots with change accordingly and confidence
+interval and test type will be returned to the R console while running the app.
 }
 \examples{
 \dontrun{shinyboxplots()}
