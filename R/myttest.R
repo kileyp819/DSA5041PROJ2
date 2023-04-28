@@ -23,6 +23,11 @@
 #' @examples
 #' \dontrun{myttest(x,y,alpha=0.05,paired=FALSE)}
 myttest = function(x, y, alpha, paired = FALSE){
+  stopifnot(is.double(x))
+  stopifnot(is.double(y))
+  stopifnot(is.double(alpha))
+  stopifnot(is.logical(paired))
+
   v = var.test(x,y)
   if(paired == TRUE){
     tp = t.test(x,y,mu = 0, paired = TRUE)
@@ -34,12 +39,8 @@ myttest = function(x, y, alpha, paired = FALSE){
     tp = t.test(x,y, var.equal = TRUE)
     test_type = "T-test"
   }
-  if (v$p.value < 0.05){
-    conclusion = "Y"
-  } else{
-    conclusion = "N"
-  }
-  ans = list(data = data.frame(x = x, y = y), alpha = alpha, ci = tp$conf.int, pvalue = tp$p.value, test_type = test_type, conclusion = conclusion)
+
+  ans = list(data = data.frame(x = x, y = y), alpha = alpha, ci = tp$conf.int, pvalue = tp$p.value, test_type = test_type, conclusion = ifelse(tp$p.value < 0.05, "Y", "N"))
   class(ans) = "Rttest"
   return(ans)
 }
